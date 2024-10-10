@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Please choose an option:</h2>
+<div class="options">
+    <form action="{{ url_for('generate_random_number') }}" method="post">
+        <h3>Random Number Generator</h3>
+        <label>Min Value:</label>
+        <input type="number" name="min" value="0" required><br>
+        <label>Max Value:</label>
+        <input type="number" name="max" value="100" required><br>
+        <button type="submit">Generate</button>
+    </form>
+    <form action="{{ url_for('generate_random_text') }}" method="post">
+        <h3>Random Text Generator</h3>
+        <label>Length:</label>
+        <input type="number" name="length" value="10" required><br>
+        <button type="submit">Generate</button>
+    </form>
+    <form action="{{ url_for('generate_fibonacci') }}" method="post">
+        <h3>Fibonacci Sequence Generator</h3>
+        <label>Number of Terms:</label>
+        <input type="number" name="n" value="10" required><br>
+        <button type="submit">Generate</button>
+    </form>
+    <form action="{{ url_for('generate_tribonacci') }}" method="post">
+        <h3>Tribonacci Sequence Generator</h3>
+        <label>Number of Terms:</label>
+        <input type="number" name="n" value="10" required><br>
+        <button type="submit">Generate</button>
+    </form>
+    <form action="{{ url_for('generate_random_haiku') }}" method="post">
+        <h3>Random Haiku Generator</h3>
+        <button type="submit">Generate</button>
+    </form>
+</div>
+{% endblock %}
