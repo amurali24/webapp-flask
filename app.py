@@ -69,4 +69,4 @@ def generate_random_haiku():
     return render_template('result.html', result=result)
 
 if __name__ == '__main__':
-    app.run(debug=False, use_reloader=False, threaded=False)
+    app.run(host='0.0.0.0', port=5000, debug=False)
